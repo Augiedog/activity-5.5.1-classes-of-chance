@@ -7,7 +7,7 @@ class Casino {
 
     playGame(betAmount) {
         if (Math.random() <= .5 || this.isFakeCoin) {
-            console.log(this.name + ` wins!`)
+            console.log(this.name + ' wins!')
         } else {
             this.timesPlayed++
             console.log(`Player Wins! ${betAmount * this.timesPlayed}`)
@@ -19,6 +19,13 @@ class Casino {
         console.log(`you rolled a ${number}`)
     }
 };
+
+const augieCasino = new Casino("AugieDog", false);
+console.log(augieCasino);
+augieCasino.playGame(5);
+augieCasino.playGame(10);
+augieCasino.playGame(25);
+augieCasino.rollDie(22)
 
 // TESTS
 const myCasino = new Casino("HackerU Casino");
